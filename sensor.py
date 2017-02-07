@@ -27,7 +27,7 @@ class Sensor:
         GPIO.setup(self.sensorRight3,GPIO.IN);
         GPIO.setup(self.sensorRight4,GPIO.IN);
 	
-	def ReadSensor(self) :
+	def readSensor(self) :
 		right = 0;
 		left = 0;
 
@@ -57,4 +57,8 @@ class Sensor:
 		if (not GPIO.input(self.sensorRight4)) :
 			# print("8");
 			right = right + 1;
-		return right - left;
+		
+		# Konversi ke skala -50,50
+		hasil = right - left;
+
+		return -50 + (((hasil - (-16)) / (16 - (-16))) * (50 - (-50)));
