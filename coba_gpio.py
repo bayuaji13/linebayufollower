@@ -2,14 +2,14 @@ import RPi.GPIO as GPIO
 import time
 
 pin1 = 3;
-pin2 = 10;
+pin2 = 5;
 pin3 = 7;
 pin4 = 8;
 
-pink1 = 15;
-pink2 = 13;
+pink1 = 13;
+pink2 = 12;
 pink3 = 11;
-pink4 = 12;
+pink4 = 10;
 kiri = 0;
 kanan = 0;
 GPIO.setmode(GPIO.BOARD);
